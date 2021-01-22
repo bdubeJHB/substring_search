@@ -4,10 +4,10 @@ package com.runaddictmusic.substring;
  * Hello world!
  *
  */
-public class App 
+public class BruteForce 
 {
-    public static void main( String[] args )
+    public static int search(String pattern, String text)
     {
-        System.out.println( "Hello World!" );
+        return 0;
     }
 }
