@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class LuhnTest {
+public class TestBruteForce {
     @Test
     public void just_a_useless_test() {
-        assertEqual(BruteForce.search("this", "Well, this is a useless text"), 0);
+        assertEquals(BruteForce.search("this", "Well, this is a useless text"), 6);
     }
 }
 
