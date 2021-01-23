@@ -13,19 +13,17 @@ import org.slf4j.LoggerFactory;
 public class Search {
         private final static Logger logger = LoggerFactory.getLogger(Search.class);
 
-        static int bruteForce(String pattern, String text) {
+        static int bruteForce(String text, String pattern) {
                 int     match = -1;
                 boolean found = false;
                 char    current;
 
-                if(pattern == null || pattern.isEmpty()
-                                || pattern.length() > text.length()) return -1;
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
 
                 for(int i = 0; i < text.length() - pattern.length(); i++) {
                         current = text.charAt(i);
-
-                        logger.debug("Checking '{}' at position '{}'",
-                                     current, i);
 
                         for(int j = 0; j < pattern.length(); j++) {
                                 if(pattern.charAt(j) != text.charAt(i + j)) {
@@ -43,11 +41,23 @@ public class Search {
                 return match;
         }
 
-        static int bruteForce(String pattern, String text, boolean ignoreCase) {
+        static int bruteForce(String text, String pattern, boolean ignoreCase) {
                 if(pattern == null || text == null || pattern.isEmpty()
                                    || text.isEmpty()
                                    || pattern.length() > text.length()) return -1;
 
-                return bruteForce(pattern.toLowerCase(), text.toLowerCase());
+                return bruteForce(text.toLowerCase(), pattern.toLowerCase());
+        }
+
+        static int boyer(String text, String pattern) {
+                return -1;
+        }
+
+        static int boyer(String text, String pattern, boolean ignoreCase) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return boyer(text.toLowerCase(), text.toLowerCase());
         }
 }
