@@ -13,6 +13,12 @@ public class Search {
                 boolean found = false;
                 char    current;
 
+                if(pattern == null || pattern.isEmpty()
+                                || pattern.length() > text.length()) return -1;
+
+                text = text.toLowerCase();
+                pattern = pattern.toLowerCase();
+
                 for(int i = 0; i < text.length() - pattern.length(); i++) {
                         current = text.charAt(i);
 

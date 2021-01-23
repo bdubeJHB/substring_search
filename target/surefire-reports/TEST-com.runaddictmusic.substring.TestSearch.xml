@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.runaddictmusic.substring.TestSearch" time="0.056" tests="3" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.runaddictmusic.substring.TestSearch" time="0.052" tests="3" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-14-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/addict/Documents/prac/java/susbtring_search/target/surefire/surefirebooter15955545413525986248.jar /home/addict/Documents/prac/java/susbtring_search/target/surefire 2021-01-23T02-33-19_030-jvmRun1 surefire8069986041505897441tmp surefire_07581673104513358629tmp"/>
+    <property name="sun.java.command" value="/home/addict/Documents/prac/java/susbtring_search/target/surefire/surefirebooter7413577336247609770.jar /home/addict/Documents/prac/java/susbtring_search/target/surefire 2021-01-23T02-41-50_849-jvmRun1 surefire5698414559194413544tmp surefire_06846689646541755696tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/addict/Documents/prac/java/susbtring_search/target/test-classes:/home/addict/Documents/prac/java/susbtring_search/target/classes:/home/addict/.m2/repository/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/home/addict/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/addict/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/home/addict/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/addict/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/addict/.m2/repository/org/slf4j/slf4j-simple/2.0.0-alpha1/slf4j-simple-2.0.0-alpha1.jar:src/main/resources/logback.xml:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/addict/Documents/prac/java/susbtring_search/target/surefire/surefirebooter15955545413525986248.jar"/>
+    <property name="surefire.real.class.path" value="/home/addict/Documents/prac/java/susbtring_search/target/surefire/surefirebooter7413577336247609770.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12"/>
     <property name="user.name" value="addict"/>
@@ -50,9 +50,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="bruteForceFindsCorrectIndex" classname="com.runaddictmusic.substring.TestSearch" time="0.031"/>
-  <testcase name="bruteForceFindsMatchEvenIfLetterCaseDiffers" classname="com.runaddictmusic.substring.TestSearch" time="0"/>
-  <testcase name="bruteForceReturnsNegative1IfNotFound" classname="com.runaddictmusic.substring.TestSearch" time="0.012">
+  <testcase name="bruteForceFindsCorrectIndex" classname="com.runaddictmusic.substring.TestSearch" time="0.023"/>
+  <testcase name="bruteForceFindsMatchEvenIfLetterCaseDiffers" classname="com.runaddictmusic.substring.TestSearch" time="0.001"/>
+  <testcase name="bruteForceReturnsNegative1IfNotFound" classname="com.runaddictmusic.substring.TestSearch" time="0.014">
     <failure message="expected: &lt;47&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <47> but was: <-1>
 	at com.runaddictmusic.substring.TestSearch.bruteForceReturnsNegative1IfNotFound(TestSearch.java:21)
 ]]></failure>
