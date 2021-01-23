@@ -50,6 +50,10 @@ public class Search {
         }
 
         static int boyer(String text, String pattern) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
                 return -1;
         }
 
