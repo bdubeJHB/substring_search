@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.runaddictmusic.substring.TestSearch
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! - in com.runaddictmusic.substring.TestSearch
+bruteForceReturnsNegative1IfNotFound  Time elapsed: 0.012 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <47> but was: <-1>
+	at com.runaddictmusic.substring.TestSearch.bruteForceReturnsNegative1IfNotFound(TestSearch.java:21)
+
