@@ -1,5 +1,8 @@
 package com.runaddictmusic.substring;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * Search:  A collection of the substring search algorithms I have learnt of.
@@ -8,6 +11,8 @@ package com.runaddictmusic.substring;
  * @author  Benedict Dube
  */
 public class Search {
+        private final static Logger logger = LoggerFactory.getLogger(Search.class);
+
         static int bruteForce(String pattern, String text) {
                 int     match = -1;
                 boolean found = false;
@@ -16,11 +21,14 @@ public class Search {
                 if(pattern == null || pattern.isEmpty()
                                 || pattern.length() > text.length()) return -1;
 
-                text = text.toLowerCase();
                 pattern = pattern.toLowerCase();
+                text = text.toLowerCase();
 
                 for(int i = 0; i < text.length() - pattern.length(); i++) {
                         current = text.charAt(i);
+
+                        logger.debug("Checking '{}' at position '{}'",
+                                     current, i);
 
                         for(int j = 0; j < pattern.length(); j++) {
                                 if(pattern.charAt(j) != text.charAt(i + j)) {
