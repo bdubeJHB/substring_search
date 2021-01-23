@@ -69,5 +69,71 @@ public class TestSearch {
                 assertNotEquals(-1, Search.boyer(text, pattern, true));
                 assertEquals(31, Search.boyer(text, pattern, true));
         }
+
+        @Test
+        public void kmpFindsCorrectIndex() {
+                String  pattern = "this";
+                String  text = "Well, this is a useless text";
+
+                assertEquals(6, Search.kmp(text, pattern));
+        }
+
+        @Test
+        public void kmpReturnsNegative1IfPatternIsNotMatched() {
+                String  pattern = "this";
+                String  text = "I think there is no match here from that pattern";
+
+                assertEquals(-1, Search.kmp(text, pattern));
+        }
+
+        @Test
+        public void kmpCanMatchStringsWithSpacesInBetween() {
+                String  pattern = "brute force";
+                String  text = "and boyer moore is faster than brute force search";
+
+                assertEquals(31, Search.kmp(text, pattern));
+        }
+
+        @Test
+        public void kmpIgnoresLetterCasingWhenLastBooleanParameterIsTrue() {
+                String  pattern = "bRuTe forCE";
+                String  text = "And boyer moore is faster than BrUte Force";
+
+                assertNotEquals(-1, Search.kmp(text, pattern, true));
+                assertEquals(31, Search.kmp(text, pattern, true));
+        }
+
+        @Test
+        public void rabinFindsCorrectIndex() {
+                String  pattern = "this";
+                String  text = "Well, this is a useless text";
+
+                assertEquals(6, Search.rabin(text, pattern));
+        }
+
+        @Test
+        public void rabinReturnsNegative1IfPatternIsNotMatched() {
+                String  pattern = "this";
+                String  text = "I think there is no match here from that pattern";
+
+                assertEquals(-1, Search.rabin(text, pattern));
+        }
+
+        @Test
+        public void rabinCanMatchStringsWithSpacesInBetween() {
+                String  pattern = "brute force";
+                String  text = "and boyer moore is faster than brute force search";
+
+                assertEquals(31, Search.rabin(text, pattern));
+        }
+
+        @Test
+        public void rabinIgnoresLetterCasingWhenLastBooleanParameterIsTrue() {
+                String  pattern = "bRuTe forCE";
+                String  text = "And boyer moore is faster than BrUte Force";
+
+                assertNotEquals(-1, Search.rabin(text, pattern, true));
+                assertEquals(31, Search.rabin(text, pattern, true));
+        }
 }
 

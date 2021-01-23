@@ -54,10 +54,42 @@ public class Search {
                                    || text.isEmpty()
                                    || pattern.length() > text.length()) return -1;
 
-                return -1;
+                return 0;
         }
 
         static int boyer(String text, String pattern, boolean ignoreCase) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return boyer(text.toLowerCase(), text.toLowerCase());
+        }
+
+        static int kmp(String text, String pattern) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return 0;
+        }
+
+        static int kmp(String text, String pattern, boolean ignoreCase) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return boyer(text.toLowerCase(), text.toLowerCase());
+        }
+
+        static int rabin(String text, String pattern) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return 0;
+        }
+
+        static int rabin(String text, String pattern, boolean ignoreCase) {
                 if(pattern == null || text == null || pattern.isEmpty()
                                    || text.isEmpty()
                                    || pattern.length() > text.length()) return -1;
