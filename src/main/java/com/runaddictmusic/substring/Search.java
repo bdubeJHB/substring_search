@@ -21,9 +21,6 @@ public class Search {
                 if(pattern == null || pattern.isEmpty()
                                 || pattern.length() > text.length()) return -1;
 
-                pattern = pattern.toLowerCase();
-                text = text.toLowerCase();
-
                 for(int i = 0; i < text.length() - pattern.length(); i++) {
                         current = text.charAt(i);
 
@@ -33,6 +30,7 @@ public class Search {
                         for(int j = 0; j < pattern.length(); j++) {
                                 if(pattern.charAt(j) != text.charAt(i + j)) {
                                         found = false;
+                                        match = -1;
                                         break;
                                 }
                                 found = true;
@@ -43,5 +41,13 @@ public class Search {
                 }
 
                 return match;
+        }
+
+        static int bruteForce(String pattern, String text, boolean ignoreCase) {
+                if(pattern == null || text == null || pattern.isEmpty()
+                                   || text.isEmpty()
+                                   || pattern.length() > text.length()) return -1;
+
+                return bruteForce(pattern.toLowerCase(), text.toLowerCase());
         }
 }

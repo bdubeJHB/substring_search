@@ -29,12 +29,12 @@ public class TestSearch {
         }
 
         @Test
-        public void bruteForceFindsMatchEvenIfLetterCaseDiffers() {
+        public void bruteForceIgnoresLetterCasingWhenLastBooleanParameterSet() {
                 String  pattern = "Boyer mooRe";
                 String  text = "And brute force is slower than Boyer Moore algo";
 
-                assertNotEquals(-1, Search.bruteForce(pattern, text));
-                assertEquals(31, Search.bruteForce(pattern, text));
+                assertNotEquals(-1, Search.bruteForce(pattern, text, true));
+                assertEquals(31, Search.bruteForce(pattern, text, true));
         }
 }
 
